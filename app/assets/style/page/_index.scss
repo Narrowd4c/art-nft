@@ -1,38 +1,48 @@
+.fixed-index{
+    padding-top: 56px;
+    @include media-breakpoint-up(md){
+        padding-top: 69px;
+    }
+    @include media-breakpoint-up(lg){
+        padding-top: 150px;
+    }
+}
+
 .recommend-img{
     height: calc(100vw + 12px);
     @include media-breakpoint-up(md){
         max-height: 340px;
     }
 }
-
-.bb{
-.ranking-img-sm{
-    img{
-        width: 87px;
-        height: 92px;
-    }
-    &:hover::after{
-    content: "MORE";
-    color:#fff;
-    font-size: 1.125rem;
-    font-family: 'Squada One', "Noto Sans TC", cursive, sans-serif;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    inset: 0;
-    background:linear-gradient(rgba(0, 0, 0, 0.5));
-    }
-    &:hover::before{
-        content:"";
+//ranking
+.ranking-sm{
+    .ranking-img-sm{
+        img{
+            width: 87px;
+            height: 92px;
+        }
+        &:hover::after{
+        content: "MORE";
+        color:#fff;
+        font-size: 1.125rem;
+        font-family: 'Squada One', "Noto Sans TC", cursive, sans-serif;
         position: absolute;
-        bottom: 0;
-        right: 0;
-        border-right:16px solid $secondary;
-        border-top: 16px solid transparent;
-        z-index: 10;
-    } 
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        inset: 0;
+        background:linear-gradient(rgba(0, 0, 0, 0.5));
+        }
+        &:hover::before{
+            content:"";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border-right:16px solid $secondary;
+            border-top: 16px solid transparent;
+            z-index: 10;
+        } 
+    }
 }
 
 
@@ -115,11 +125,7 @@
     
 }
 
-///
-///
-.swiper{
-    //height: 434px;
-}
+///swiper
 .swiper-slide {
   background: var(--bg-url);
   background-position: center;
@@ -159,26 +165,5 @@
     transition: width 0.3s;
 }
 
-///
-.artwork-content{
-    position: relative;
-    background: white;
-    .art-work-hover{
-        position: absolute;
-        inset: 16px;
-         visibility: hidden;
-        border: 1px solid white;
-    }
-    &:hover{
-        .artwork-body::after{
-        content:"";
-        background: rgba(0,0,0,0.5);
-        position: absolute;
-        inset: 0;
-    }
-    .art-work-hover{
-        visibility: visible;
-    }
-    }
-}
+
 

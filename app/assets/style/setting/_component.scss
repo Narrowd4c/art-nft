@@ -15,7 +15,8 @@
 .change .menu-bar3 {
   transform: rotate(46deg) translate(-4px, -6px);
 }
-//more-btn
+
+//btn-more
 .btn-more{
   display: inline-block;
   padding: 8px 48px;
@@ -37,4 +38,26 @@
     border-right: 16px solid $black;
   }
   }
+}
+//art-card
+.artwork-content{
+    position: relative;
+    background: white;
+    .art-work-hover{
+        position: absolute;
+        inset: 16px;
+         visibility: hidden;
+        border: 1px solid white;
+    }
+    &:hover{
+        .artwork-body::after{
+        content:"";
+        background: rgba(0,0,0,0.5);
+        position: absolute;
+        inset: 0;
+    }
+    .art-work-hover{
+        visibility: visible;
+    }
+    }
 }

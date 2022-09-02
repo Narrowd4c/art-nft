@@ -13,21 +13,10 @@
 .ring-1{
     box-shadow:0 0 0 1px #000;
 }
-.obj-position-center{
-    object-position: center;
-}
 .row-gap-12{
     row-gap: 3rem;
 }
-.fixed-index{
-    padding-top: 56px;
-    @include media-breakpoint-up(md){
-        padding-top: 69px;
-    }
-    @include media-breakpoint-up(lg){
-        padding-top: 150px;
-    }
-}
+
 .fixed{
    padding-top: 80px;
     @include media-breakpoint-up(md){
