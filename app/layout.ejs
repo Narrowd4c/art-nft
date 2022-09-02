@@ -13,27 +13,27 @@
   </head>
 
   <body>
-  <header class="border-bottom border-black mb-10">
-  <div class="container-lg d-flex justify-content-between align-items-center py-4 py-md-0">
+  <header class="border-bottom border-black position-fixed bg-primary w-100">
+  <div class="container-lg d-flex justify-content-between align-items-center py-4 py-lg-0">
       <a href="./index.html" class="py-lg-8 me-4 flex-grow-1" >
         <h1 class="visually-hidden">Art NFT</h1>
         <img src="./assets/images/logo.svg" alt="logo" class="logo">
       </a>
-      <div class="d-none d-md-block py-lg-10 px-lg-12 py-md-5 px-md-4 border-start border-dark d-flex align-items-center">
+      <div class="d-none d-lg-block py-lg-10 px-lg-12 py-lg-5 px-lg-4 border-start border-dark d-flex align-items-center">
           <input type="text" placeholder="搜尋作品名稱、藝術家名稱" class="search border-0 bg-primary fs-6" >
-          <i class="fa-solid fa-magnifying-glass ms-lg-6 ms-md-2 fs-4"></i>
+          <i class="fa-solid fa-magnifying-glass ms-lg-6 ms-lg-2 fs-4"></i>
       </div>
-      <ul class="d-none d-md-flex fs-6">
-        <li class="border-start border-dark"><a href="#" class="d-block py-lg-10 px-lg-12 py-md-5 px-md-4 px-4 h-100 fw-bold">探索</a></li>
-        <li class="border-start border-dark"><a href="#" class="d-block py-lg-10 px-lg-12 py-md-5 px-md-4 px-4 h-100 fw-bold">市值</a></li>
-        <li class="border-start border-dark"><a href="#" class="d-md-none"></a><a href="#" class="d-none d-md-block py-lg-10 ps-lg-12 py-md-5 ps-md-4 h-100"><i class="fa-solid fa-wallet fs-6"></i></a></li>
+      <ul class="d-none d-lg-flex fs-6">
+        <li class="border-start border-dark"><a href="./explore.html" class="d-block py-lg-10 px-lg-12 py-lg-5 px-lg-4 px-4 h-100 fw-bold">探索</a></li>
+        <li class="border-start border-dark"><a href="#" class="d-block py-lg-10 px-lg-12 py-lg-5 px-lg-4 px-4 h-100 fw-bold">市值</a></li>
+        <li class="border-start border-dark"><a href="#" class="d-lg-none"></a><a href="#" class="d-none d-lg-block py-lg-10 ps-lg-12 py-md-5 ps-md-4 h-100"><i class="fa-solid fa-wallet fs-6"></i></a></li>
       </ul>
       
-        <a href="#" id="toggleSearch" class="d-md-none"><i class="fa-solid fa-magnifying-glass ms-6 fs-6"></i></a>
-        <a href="#" class="d-md-none ms-6" onclick="toggleMenu(this)" id="menuIcon">
-          <div class="menu1"></div>
-          <div class="menu2"></div>
-          <div class="menu3"></div>
+        <a href="#" id="toggleSearch" class="d-lg-none"><i class="fa-solid fa-magnifying-glass ms-6 fs-6"></i></a>
+        <a href="#" class="d-lg-none ms-6" onclick="toggleMenu(this)" id="menuIcon">
+          <div class="menu-bar1"></div>
+          <div class="menu-bar2"></div>
+          <div class="menu-bar3"></div>
       </a>
 
     </div>
@@ -44,9 +44,9 @@
     </div>
     <div class="d-none w-100 h-100 position-absolute" id="mobile-menu">
         <ul class="border-top border-black text-center fs-6 fw-bolder py-3 px-3 bg-white">
-          <li><a href="" class="d-block py-3 border-bottom border-black">探索</a></li>
-          <li><a href="" class="d-block py-3 my-3">市值</a></li>
-          <li><a href="" class="d-block btn btn-secondary py-3 my-3 border rounded-0 text-white fs-6">連結錢包</a></li>
+          <li><a href="./explore.html" class="d-block py-3 border-bottom border-black">探索</a></li>
+          <li><a href="#" class="d-block py-3 my-3">市值</a></li>
+          <li><a href="#" class="d-block btn btn-secondary py-3 my-3 border rounded-0 text-white fs-6">連結錢包</a></li>
         </ul>
         <div class="bg-black vh-100 opacity-75" onclick="removeMenu(this)"></div>
       </div>
