@@ -1,0 +1,14 @@
+
+input:focus-visible{
+    outline: none;
+}
+.search[type="text"]{
+    width: 220px;
+}
+.logo{
+    max-width: 85px;
+    @include media-breakpoint-up(md){
+        max-width: 190px;
+    }
+}
+
