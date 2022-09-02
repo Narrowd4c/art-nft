@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Art NFT 探索</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8e1485e76d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body>
+  <header class="border-bottom border-black position-fixed bg-primary w-100">
+  <div class="container-lg d-flex justify-content-between align-items-center py-4 py-lg-0">
+      <a href="./index.html" class="py-lg-8 me-4 flex-grow-1" >
+        <h1 class="visually-hidden">Art NFT</h1>
+        <img src="./assets/images/logo.svg" alt="logo" class="logo">
+      </a>
+      <div class="d-none d-lg-block py-lg-10 px-lg-12 py-lg-5 px-lg-4 border-start border-dark d-flex align-items-center">
+          <input type="text" placeholder="搜尋作品名稱、藝術家名稱" class="search border-0 bg-primary fs-6" >
+          <i class="fa-solid fa-magnifying-glass ms-lg-6 ms-lg-2 fs-4"></i>
+      </div>
+      <ul class="d-none d-lg-flex fs-6">
+        <li class="border-start border-dark"><a href="./explore.html" class="d-block py-lg-10 px-lg-12 py-lg-5 px-lg-4 px-4 h-100 fw-bold">探索</a></li>
+        <li class="border-start border-dark"><a href="#" class="d-block py-lg-10 px-lg-12 py-lg-5 px-lg-4 px-4 h-100 fw-bold">市值</a></li>
+        <li class="border-start border-dark"><a href="#" class="d-lg-none"></a><a href="#" class="d-none d-lg-block py-lg-10 ps-lg-12 py-md-5 ps-md-4 h-100"><i class="fa-solid fa-wallet fs-6"></i></a></li>
+      </ul>
+      
+        <a href="#" id="toggleSearch" class="d-lg-none"><i class="fa-solid fa-magnifying-glass ms-6 fs-6"></i></a>
+        <a href="#" class="d-lg-none ms-6" onclick="toggleMenu(this)" id="menuIcon">
+          <div class="menu-bar1"></div>
+          <div class="menu-bar2"></div>
+          <div class="menu-bar3"></div>
+      </a>
+
+    </div>
+    <div class="d-none bg-primary d-flex align-itemx-center position-absolute top-0 vw-100 z-index px-3 py-4" id="mobile-search">
+      <a href="#" onclick="removeBtn(this)" class="d-flex align-items-center"><i class="fa-solid fa-angle-left me-4  fs-8"></i></a>
+      <input type="text" class="fs-8 border-0 bg-primary flex-grow-1" placeholder="搜尋作品名稱、藝術家名稱">
+      <a href="#"><i class="fa-solid fa-magnifying-glass ms-6 fs-6"></i></a>
+    </div>
+    <div class="d-none w-100 h-100 position-absolute" id="mobile-menu">
+        <ul class="border-top border-black text-center fs-6 fw-bolder py-3 px-3 bg-white">
+          <li><a href="./explore.html" class="d-block py-3 border-bottom border-black">探索</a></li>
+          <li><a href="#" class="d-block py-3 my-3">市值</a></li>
+          <li><a href="#" class="d-block btn btn-secondary py-3 my-3 border rounded-0 text-white fs-6">連結錢包</a></li>
+        </ul>
+        <div class="bg-black vh-100 opacity-75" onclick="removeMenu(this)"></div>
+      </div>
+   </header>
+      <div class="container-md mb-10 mb-lg-20 fixed">
+    <div class="row row-gap-12" data-masonry='{"percentPosition": true }'>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork"> 
+                <div class="artwork-content p-2 p-md-6">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art09.jpg" alt="art09" class="" height="254px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">區塊戀-他的私生活</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork"> 
+                <div class="artwork-content p-2 p-md-6">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art10.jpg" alt="art10" class="" height="327px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">夏娃的醜聞</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork "> 
+                <div class="artwork-content p-2 p-md-6">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art02.jpg" alt="art02" class="" height="254px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">藍色啤酒海</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork"> 
+                <div class="artwork-content p-2 p-md-6 ">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art11.jpg" alt="art11" class="" height="169px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">沒有人愛我</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork "> 
+                <div class="artwork-content p-2 p-md-6 ">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art12.jpg" alt="art12" class="" height="174px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">不哭不哭眼淚是珍珠</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork "> 
+                <div class="artwork-content p-2 p-md-6 ">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art03.jpg" alt="art03" class="" height="254px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">十分鐘就到</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork d-none d-lg-block"> 
+                <div class="artwork-content p-2 p-md-6 ">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art04.jpg" alt="art04" class="" height="395px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">我這樣有美嗎</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork d-none d-lg-block"> 
+                <div class="artwork-content p-2 p-md-6 ">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art27.jpg" alt="art27" class="" height="254px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">我真的受傷了</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork"> 
+                <div class="artwork-content p-2 p-md-6">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art19.jpg" alt="art19" class="" height="334px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">區塊戀-他的私生活</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork"> 
+                <div class="artwork-content p-2 p-md-6">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art16.jpg" alt="art16" class="" height="254px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">區塊戀-他的私生活</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork"> 
+                <div class="artwork-content p-2 p-md-6">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art15.jpg" alt="art15" class="" height="326px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">區塊戀-他的私生活</h5>
+                </div>
+        </div>
+        <div class="col-6 col-lg-4 col-xl-3 mb-4 mb-lg-12 card-artwork"> 
+                <div class="artwork-content p-2 p-md-6">
+                    <div class="artwork-body position-relative">
+                        <img src="./assets/images/art06.jpg" alt="art06" class="" height="340px">
+                         <div class="p-4 art-work-hover z-index text-white">
+                            <p>唯一想擁有的人，唯一不可以擁有的</p>
+                            <p class="font-squada lh-1"><i class="fa-brands fa-ethereum me-2 "></i>300</p>
+                            <a href="#" class="btn-more border border-black bg-white position-absolute bottom-0 end-0 m-4">MORE</a>
+                         </div>
+                    </div>
+                </div>
+                <div class="artwork-footer py-2 py-md-4 border-bottom border-black">
+                    <h5 class="fw-bolder fs-7">區塊戀-他的私生活</h5>
+                </div>
+        </div>
+    </div>
+</div>
+    <footer class="border-top border-black pt-2 ">
+      <p class="py-6 border-top border-black border-4 text-center">© ART NFT. All Rights Reserved</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+  </body>
+</html>

@@ -13,27 +13,27 @@
   </head>
 
   <body>
-  <header class="border-bottom border-black mb-10">
-  <div class="container-lg d-flex justify-content-between align-items-center py-4 py-md-0">
+  <header class="border-bottom border-black position-fixed bg-primary w-100">
+  <div class="container-lg d-flex justify-content-between align-items-center py-4 py-lg-0">
       <a href="./index.html" class="py-lg-8 me-4 flex-grow-1" >
         <h1 class="visually-hidden">Art NFT</h1>
         <img src="./assets/images/logo.svg" alt="logo" class="logo">
       </a>
-      <div class="d-none d-md-block py-lg-10 px-lg-12 py-md-5 px-md-4 border-start border-dark d-flex align-items-center">
+      <div class="d-none d-lg-block py-lg-10 px-lg-12 py-lg-5 px-lg-4 border-start border-dark d-flex align-items-center">
           <input type="text" placeholder="搜尋作品名稱、藝術家名稱" class="search border-0 bg-primary fs-6" >
-          <i class="fa-solid fa-magnifying-glass ms-lg-6 ms-md-2 fs-4"></i>
+          <i class="fa-solid fa-magnifying-glass ms-lg-6 ms-lg-2 fs-4"></i>
       </div>
-      <ul class="d-none d-md-flex fs-6">
-        <li class="border-start border-dark"><a href="#" class="d-block py-lg-10 px-lg-12 py-md-5 px-md-4 px-4 h-100 fw-bold">探索</a></li>
-        <li class="border-start border-dark"><a href="#" class="d-block py-lg-10 px-lg-12 py-md-5 px-md-4 px-4 h-100 fw-bold">市值</a></li>
-        <li class="border-start border-dark"><a href="#" class="d-md-none"></a><a href="#" class="d-none d-md-block py-lg-10 ps-lg-12 py-md-5 ps-md-4 h-100"><i class="fa-solid fa-wallet fs-6"></i></a></li>
+      <ul class="d-none d-lg-flex fs-6">
+        <li class="border-start border-dark"><a href="./explore.html" class="d-block py-lg-10 px-lg-12 py-lg-5 px-lg-4 px-4 h-100 fw-bold">探索</a></li>
+        <li class="border-start border-dark"><a href="#" class="d-block py-lg-10 px-lg-12 py-lg-5 px-lg-4 px-4 h-100 fw-bold">市值</a></li>
+        <li class="border-start border-dark"><a href="#" class="d-lg-none"></a><a href="#" class="d-none d-lg-block py-lg-10 ps-lg-12 py-md-5 ps-md-4 h-100"><i class="fa-solid fa-wallet fs-6"></i></a></li>
       </ul>
       
-        <a href="#" id="toggleSearch" class="d-md-none"><i class="fa-solid fa-magnifying-glass ms-6 fs-6"></i></a>
-        <a href="#" class="d-md-none ms-6" onclick="toggleMenu(this)" id="menuIcon">
-          <div class="menu1"></div>
-          <div class="menu2"></div>
-          <div class="menu3"></div>
+        <a href="#" id="toggleSearch" class="d-lg-none"><i class="fa-solid fa-magnifying-glass ms-6 fs-6"></i></a>
+        <a href="#" class="d-lg-none ms-6" onclick="toggleMenu(this)" id="menuIcon">
+          <div class="menu-bar1"></div>
+          <div class="menu-bar2"></div>
+          <div class="menu-bar3"></div>
       </a>
 
     </div>
@@ -44,24 +44,24 @@
     </div>
     <div class="d-none w-100 h-100 position-absolute" id="mobile-menu">
         <ul class="border-top border-black text-center fs-6 fw-bolder py-3 px-3 bg-white">
-          <li><a href="" class="d-block py-3 border-bottom border-black">探索</a></li>
-          <li><a href="" class="d-block py-3 my-3">市值</a></li>
-          <li><a href="" class="d-block btn btn-secondary py-3 my-3 border rounded-0 text-white fs-6">連結錢包</a></li>
+          <li><a href="./explore.html" class="d-block py-3 border-bottom border-black">探索</a></li>
+          <li><a href="#" class="d-block py-3 my-3">市值</a></li>
+          <li><a href="#" class="d-block btn btn-secondary py-3 my-3 border rounded-0 text-white fs-6">連結錢包</a></li>
         </ul>
         <div class="bg-black vh-100 opacity-75" onclick="removeMenu(this)"></div>
       </div>
    </header>
       
-<div class="container-lg mb-20">
-    <div class="row ">
-        <div class="col-12  g-0 ring-1">
+<div class="container-lg mb-20 fixed-index">
+    <div class="row">
+        <div class="col-12 g-0 ring-1">
             <div class="row flex-row g-0">
                 <div class="d-none col-md-1 d-lg-flex bg-black text-white p-6 writing-vertiacl-lr align-items-center">
                     <h2 class="font-squada display-5 mb-4">Recommend</h2>
                     <h3 class="fs-5 lh-1">推薦系列</h3>
                 </div>    
                 <img src="./assets/images/art01.jpg" alt="art01" class="col-md-7 recommend" >
-                <div class="col-md-4 card-body d-flex flex-column bg-white px-3 py-8 p-md-6 pt-md-20 ">
+                <div class="col-md-4 card-body d-flex flex-column bg-white px-3 py-8 px-md-2 pb-md-6 pt-md-20 px-xxl-6">
                     <h5 class="fs-6 fw-bolder mb-2">Kemus Wu</h5>
                     <h4 class="card-title display-5 fw-bolder mb-6">瞳孔:流動的脈絡</h4>
                     <p class="card-text ">眼睛，總是吸引著我們的注意力，看、被看，也許眼睛裡有著從另一個世界看我們的世界。</p>
@@ -90,8 +90,8 @@
     </div>
 </div>
 <div class="container-md mb-20">
-    <div class="d-flex p-0 justify-conetnet-between border-bottom border-black mb-6 mb-lg-12">
-        <h2 class="pb-4 flex-grow-1 display-5 font-squada fw-bolder ">Ranking<span class="d-none d-md-inline ms-4 fs-6 align-text-bottom">市價排行榜</span></h2>
+    <div class="d-flex p-0 justify-conetnet-between border-bottom border-black mb-6 mb-lg-12" >
+        <h2 class="pb-4 flex-grow-1 display-5 font-squada fw-bolder" data-aos="fade-left">Ranking<span class="d-none d-md-inline ms-4 fs-6 align-text-bottom">市價排行榜</span></h2>
         <a href="#" class="btn-more align-self-end">MORE</a>
     </div>
     <ul class="row g-6">
@@ -144,7 +144,7 @@
             </div>
         </li>
         <li class="col-lg-4 col-md-6">
-            <div class="ring-1 d-flex bb">
+            <div class="ring-1 d-flex ranking-sm">
                 <div class="position-relative d-flex">
                     <h4 class="bg-white px-3 py-6 py-xl-3 px-xl-6 h2 font-paytone ring-1 d-flex align-items-center">4</h4>
                     <a href="#" class="ranking-img-sm position-relative ring-1"><img src="./assets/images/art13.jpg" alt="art04" class="position-relative "></a>
@@ -159,7 +159,7 @@
             </div>
         </li>
          <li class="col-lg-4 col-md-6">
-            <div class="ring-1 d-flex bb">
+            <div class="ring-1 d-flex ranking-sm">
                 <div class="position-relative d-flex">
                     <h4 class="bg-white px-3 py-6 py-xl-3 px-xl-6 h2 font-paytone ring-1 d-flex align-items-center">5</h4>
                     <a href="#" class="ranking-img-sm position-relative ring-1"><img src="./assets/images/art07.jpg" alt="art04" class="position-relative "></a>
@@ -175,7 +175,7 @@
             </div>
         </li>
         <li class="col-lg-4 col-md-6">
-            <div class="ring-1 d-flex bb">
+            <div class="ring-1 d-flex ranking-sm">
                 <div class="position-relative d-flex">
                     <h4 class="bg-white px-3 py-6 py-xl-3 px-xl-6 h2 font-paytone ring-1 d-flex align-items-center">6</h4>
                     <a href="#" class="ranking-img-sm position-relative ring-1"><img src="./assets/images/art08.jpg" alt="art04" class="position-relative "></a>
@@ -194,7 +194,7 @@
 </div>
 <div class="container-md mb-20">
     <div class="d-flex p-0 justify-conetnet-between border-bottom border-black mb-6 mb-lg-12">
-        <h2 class="pb-4 flex-grow-1 display-5 font-squada fw-bolder ">Artist<span class="d-none d-md-inline ms-4 fs-6 align-text-bottom">熱門藝術家</span></h2>
+        <h2 class="pb-4 flex-grow-1 display-5 font-squada fw-bolder" data-aos="fade-left">Artist<span class="d-none d-md-inline ms-4 fs-6 align-text-bottom">熱門藝術家</span></h2>
         <a href="#" class="btn-more align-self-end">MORE</a>
     </div>
     
@@ -255,7 +255,7 @@
 
 <div class="container-md mb-20">
     <div class="d-flex p-0 justify-conetnet-between border-bottom border-black mb-6 mb-lg-12">
-        <h2 class="pb-4 flex-grow-1 display-5 font-squada fw-bolder ">Artwork<span class="d-none d-md-inline ms-4 fs-6 align-text-bottom">最新藝術品</span></h2>
+        <h2 class="pb-4 flex-grow-1 display-5 font-squada fw-bolder" data-aos="fade-left">Artwork<span class="d-none d-md-inline ms-4 fs-6 align-text-bottom">最新藝術品</span></h2>
         <a href="#" class="btn-more align-self-end">MORE</a>
     </div>
     <div class="row row-gap-12" data-masonry='{"percentPosition": true }'>
@@ -383,8 +383,8 @@
 </div>
 <div class="border-bottom border-black pb-2">
     <div class="pb-8 text-center border-bottom border-4 border-black">
-            <h2 class="fs-2 font-squada mb-4">Join Us</h2>
-            <h3 class="fs-5 ">創建並出售你的藝術品</h3>
+            <h2 class="display-5 font-squada mb-4" data-aos="zoom-in" data-aos-duration="1000">Join Us</h2>
+            <h3 class="fs-5" data-aos="zoom-in" data-aos-duration="1000">創建並出售你的藝術品</h3>
     </div>
 </div>
 <div class="container-xl">

@@ -80,10 +80,9 @@ var swiper = new Swiper(".artistSwiper", {
       spaceBetween: 24
     }
   },
-  speed: 1000,
+  speed: 1500,
   pagination: {
-    el: ".swiper-pagination",
-    clickable: true
+    el: ".swiper-pagination"
   }
 });
 //# sourceMappingURL=all.js.map
