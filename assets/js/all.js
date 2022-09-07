@@ -61,14 +61,8 @@ AOS.init({
 });
 "use strict";
 
-var row = document.querySelector(".row");
-var msnry;
-imagesLoaded(row, function () {
-  msnry = new Masonry(row, {
-    percentPosition: true,
-    horizontalOrder: true
-  });
-});
+var row = document.querySelectorAll(".row");
+imagesLoaded(row);
 "use strict";
 
 var swiper = new Swiper(".artistSwiper", {
@@ -86,7 +80,7 @@ var swiper = new Swiper(".artistSwiper", {
       spaceBetween: 24
     }
   },
-  speed: 1500,
+  speed: 500,
   pagination: {
     el: ".swiper-pagination"
   }
