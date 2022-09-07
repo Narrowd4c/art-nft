@@ -3,20 +3,20 @@
 var mobileMenu = document.querySelector("#mobile-menu");
 var mobileSearch = document.querySelector("#mobile-search");
 var toggleSearch = document.querySelector("#toggleSearch");
-var menuIcon = document.querySelector("#menuIcon");
+var menuIcon = document.querySelector(".menuIcon");
 
-function toggleMenu(x) {
-  x.classList.toggle("change");
+function toggleMenu(e) {
+  e.classList.toggle("change");
   mobileMenu.classList.toggle("d-none");
 }
 
-function removeMenu(x) {
+function removeMenu(e) {
   menuIcon.classList.toggle("change");
-  x.parentElement.classList.add("d-none");
+  e.parentElement.classList.add("d-none");
 }
 
-function removeBtn(x) {
-  x.parentElement.classList.add("d-none");
+function removeBtn(e) {
+  e.parentElement.classList.add("d-none");
 }
 
 toggleSearch.addEventListener("click", function (e) {
@@ -62,7 +62,13 @@ AOS.init({
 "use strict";
 
 var row = document.querySelector(".row");
-imagesLoaded(row);
+var msnry;
+imagesLoaded(row, function () {
+  msnry = new Masonry(row, {
+    percentPosition: true,
+    horizontalOrder: true
+  });
+});
 "use strict";
 
 var swiper = new Swiper(".artistSwiper", {
@@ -70,7 +76,7 @@ var swiper = new Swiper(".artistSwiper", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 24,
   autoplay: {
     delay: 5000
   },

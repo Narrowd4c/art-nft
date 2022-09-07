@@ -14698,32 +14698,6 @@ img {
      object-fit: cover;
 }
 
-.menu-bar1, .menu-bar2, .menu-bar3 {
-  width: 21px;
-  height: 3px;
-  background: #000;
-  margin-top: 4px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.change .menu-bar1 {
-  -webkit-transform: rotate(-46deg) translate(-4px, 5px);
-      -ms-transform: rotate(-46deg) translate(-4px, 5px);
-          transform: rotate(-46deg) translate(-4px, 5px);
-}
-
-.change .menu-bar2 {
-  opacity: 0;
-}
-
-.change .menu-bar3 {
-  -webkit-transform: rotate(46deg) translate(-4px, -6px);
-      -ms-transform: rotate(46deg) translate(-4px, -6px);
-          transform: rotate(46deg) translate(-4px, -6px);
-}
-
 .btn-more {
   display: inline-block;
   padding: 8px 48px;
@@ -14829,6 +14803,39 @@ input:focus-visible {
   }
 }
 
+.menuIcon {
+  cursor: pointer;
+}
+.menuIcon:hover > div {
+  background: #E6553B;
+}
+
+.menu-bar1, .menu-bar2, .menu-bar3 {
+  width: 21px;
+  height: 3px;
+  background: #000;
+  margin-top: 4px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.change .menu-bar1 {
+  -webkit-transform: rotate(-46deg) translate(-4px, 5px);
+      -ms-transform: rotate(-46deg) translate(-4px, 5px);
+          transform: rotate(-46deg) translate(-4px, 5px);
+}
+
+.change .menu-bar2 {
+  opacity: 0;
+}
+
+.change .menu-bar3 {
+  -webkit-transform: rotate(46deg) translate(-4px, -6px);
+      -ms-transform: rotate(46deg) translate(-4px, -6px);
+          transform: rotate(46deg) translate(-4px, -6px);
+}
+
 .fixed-index {
   padding-top: 56px;
 }
@@ -14886,16 +14893,16 @@ input:focus-visible {
   z-index: 10;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .ranking-header .ranking-img-sm img {
     width: 87px;
     height: 92px;
   }
   .ranking-header .ranking-img-sm:hover::after {
-    content: "MORE";
+    content: "More";
     color: #fff;
     font-size: 1.125rem;
-    font-family: Squada;
+    font-family: "Squada One", "Noto Sans TC", cursive, sans-serif;
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
