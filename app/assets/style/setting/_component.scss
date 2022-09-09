@@ -1,20 +1,3 @@
-//menu-button
-.menu-bar1,.menu-bar2,.menu-bar3{
-    width: 21px;
-    height: 3px;
-    background: #000;
-    margin-top: 4px;
-    transition: 0.5s;
-}
-.change .menu-bar1 {
-  transform: rotate(-46deg) translate(-4px, 5px);
-}
-.change .menu-bar2 {
-    opacity: 0;
-}
-.change .menu-bar3 {
-  transform: rotate(46deg) translate(-4px, -6px);
-}
 
 //btn-more
 .btn-more{
@@ -49,6 +32,7 @@
          visibility: hidden;
         border: 1px solid white;
     }
+    @media (hover:hover) {
     &:hover{
         .artwork-body::after{
         content:"";
@@ -60,4 +44,44 @@
         visibility: visible;
     }
     }
+}
+}
+  .art09{
+    height: 139px;
+  }
+  .art10{
+    height: 151px;
+  }
+  .art02{
+    height: 93px;
+  }
+  .art11{
+    height: 173px;
+  }
+  .art12{
+    height: 192px;
+  }
+  .art03{
+    height: 99px;
+  }
+
+@include media-breakpoint-up(lg){
+  .art09{
+    height: 254px;
+  }
+  .art10{
+    height: 327px;
+  }
+  .art02{
+    height: 254px;
+  }
+  .art11{
+    height: 169px;
+  }
+  .art12{
+    height: 174px;
+  }
+  .art03{
+    height: 254px;
+  }
 }

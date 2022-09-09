@@ -26,3 +26,9 @@
         padding-top: 150px;
     }
 }
+.line-clamp{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}

@@ -3,7 +3,7 @@ var swiper = new Swiper(".artistSwiper", {
   grabCursor: true,
   centeredSlides: true,
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 24,
   autoplay: {
     delay: 5000,
   },
@@ -13,7 +13,7 @@ var swiper = new Swiper(".artistSwiper", {
       spaceBetween: 24,
     },
   },
-  speed: 1500,
+  speed: 800,
   pagination: {
     el: ".swiper-pagination",
   },

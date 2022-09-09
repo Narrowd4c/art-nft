@@ -47,17 +47,17 @@
 
 
 .ranking-header{
-    @include media-breakpoint-down(md){
+    @include media-breakpoint-down(lg){
         .ranking-img-sm{
             img{
                 width: 87px;
                 height: 92px;
             }
             &:hover::after{
-            content: "MORE";
+            content: "More";
             color:#fff;
             font-size: 1.125rem;
-            font-family: Squada ;
+            font-family: "Squada One", "Noto Sans TC", cursive, sans-serif;;
             position: absolute;
             display: flex;
             justify-content: center;
@@ -139,18 +139,16 @@
     width: calc(25% - 24px) !important;
     height: 216px;
    }
-  
 }
 .swiper-slide-active{
     @include media-breakpoint-up(lg){
         width: 50% !important;
-        transition: height 0.5s ease-in-out 0s;
     }
-    
     filter:grayscale(0);
     .slide-content{
         display: block !important;
   }
+  
 }
 .swiper-pagination-bullet{
     border-radius: 0px;
