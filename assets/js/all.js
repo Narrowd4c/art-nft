@@ -1,5 +1,17 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var mobileMenu = document.querySelector("#mobile-menu");
 var mobileSearch = document.querySelector("#mobile-search");
 var toggleSearch = document.querySelector("#toggleSearch");
@@ -22,6 +34,16 @@ function removeBtn(e) {
 toggleSearch.addEventListener("click", function (e) {
   e.stopPropagation();
   mobileSearch.classList.toggle("d-none");
+}); //
+
+var triggerTabList = document.querySelectorAll("#aritstTab a");
+triggerTabList = _toConsumableArray(triggerTabList);
+triggerTabList.forEach(function (triggerEl) {
+  var tabTrigger = new bootstrap.Tab(triggerEl);
+  triggerEl.addEventListener("click", function (event) {
+    event.preventDefault();
+    tabTrigger.show();
+  });
 });
 "use strict";
 
@@ -61,8 +83,15 @@ AOS.init({
 });
 "use strict";
 
-var row = document.querySelectorAll(".row");
-imagesLoaded(row);
+var artWork = document.querySelector("#art-work");
+var msnry = new Masonry(artWork, {
+  percentPosition: true,
+  horizontalOrder: true
+});
+imagesLoaded(artWork).on("progress", function () {
+  // layout Masonry after each image loads
+  msnry.layout();
+});
 "use strict";
 
 var swiper = new Swiper(".artistSwiper", {
@@ -80,7 +109,7 @@ var swiper = new Swiper(".artistSwiper", {
       spaceBetween: 24
     }
   },
-  speed: 500,
+  speed: 800,
   pagination: {
     el: ".swiper-pagination"
   }
