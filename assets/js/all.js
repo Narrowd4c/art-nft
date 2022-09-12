@@ -88,8 +88,21 @@ var msnry = new Masonry(artWork, {
   percentPosition: true,
   horizontalOrder: true
 });
+
+var msInit = function msInit() {
+  var msnry = new Masonry(artWork, {
+    percentPosition: true,
+    horizontalOrder: true
+  });
+};
+
+var collectionTab = document.querySelector("#collection-tab");
+
+if (collectionTab) {
+  collectionTab.addEventListener("shown.bs.tab", msInit);
+}
+
 imagesLoaded(artWork).on("progress", function () {
-  // layout Masonry after each image loads
   msnry.layout();
 });
 "use strict";

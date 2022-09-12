@@ -15846,7 +15846,7 @@ img {
   visibility: hidden;
   border: 1px solid white;
 }
-@media (hover: hover) {
+@media (min-width: 768px) and (hover: hover) {
   .artwork-content:hover .artwork-body::after {
     content: "";
     background: rgba(0, 0, 0, 0.5);
@@ -15882,7 +15882,7 @@ img {
   height: 99px;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .art09 {
     height: 254px;
   }
@@ -16190,18 +16190,21 @@ input:focus-visible {
 @media (min-width: 768px) {
   .artist-img {
     max-height: 261px;
+    width: -webkit-fill-available;
   }
 }
 
-.nav-tabs {
+.tabs {
   border-bottom: 1px solid black;
 }
-.nav-tabs .nav-link {
+.tabs .tabs-link {
   color: #808080;
   padding: 17px 48px 17px;
   margin-bottom: -1px;
+  cursor: pointer;
+  border-bottom: 1px solid transparent;
 }
-.nav-tabs .nav-link.active {
+.tabs .tabs-link.active {
   color: #000;
   border: 1px solid black;
   border-bottom: 1px solid #F0F0F0;
