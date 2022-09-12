@@ -23,29 +23,35 @@
   }
 }
 //art-card
+
+
 .artwork-content{
-    position: relative;
-    background: white;
-    .art-work-hover{
-        position: absolute;
-        inset: 16px;
-         visibility: hidden;
-        border: 1px solid white;
-    }
+  position: relative;
+  background: white;
+  .art-work-hover{
+    position: absolute;
+    inset: 16px;
+    visibility: hidden;
+    border: 1px solid white;
+  }
+  @include media-breakpoint-up(md){
     @media (hover:hover) {
     &:hover{
-        .artwork-body::after{
-        content:"";
-        background: rgba(0,0,0,0.5);
-        position: absolute;
-        inset: 0;
+      .artwork-body::after{
+      content:"";
+      background: rgba(0,0,0,0.5);
+      position: absolute;
+      inset: 0;
     }
     .art-work-hover{
-        visibility: visible;
+      visibility: visible;
     }
     }
+  }
+  }
+
 }
-}
+
   .art09{
     height: 139px;
   }
@@ -65,7 +71,7 @@
     height: 99px;
   }
 
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(md){
   .art09{
     height: 254px;
   }
